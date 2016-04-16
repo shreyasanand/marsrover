@@ -17,44 +17,44 @@ The output for each rover should be its final co-ordinates and heading.
 
 
 ###Test Input:
-5 5
-1 2 N
-LMLMLMLMM
-3 3 E
-MMRMMRMRRM
+5 5 <br />
+1 2 N <br />
+LMLMLMLMM <br />
+3 3 E <br />
+MMRMMRMRRM <br />
 ###Expected Output:
-1 3 N
-5 1 E
+1 3 N <br />
+5 1 E <br />
 
 ##Design
 
-> The Plateau/Grid on Mars
-    - The plateau is divided into a grid format represented by the Grid class.
-    - This Grid contains cells which is represented by the Cell class.
+> The Plateau/Grid on Mars <br />
+    - The plateau is divided into a grid format represented by the Grid class. <br />
+    - This Grid contains cells which is represented by the Cell class. <br />
     - The grid has bounds which is represented by bottom left and top right cells.
     
-> The Rovers
-    - The rovers are represented by the Rover class.
-    - Each rover has a position which is represented by a Cell object.
-    - Each rover has a direction which is represented by a Direction enum.
-    - The RoverSquad object maintains a list of rovers and deploys them on the grid.
-    - The rovers can move around the grid using functions like: rotateLeft, rotateRight, move.
-    - The rovers can be moved by passing a set of commands to the processCommands function.
+> The Rovers <br />
+    - The rovers are represented by the Rover class. <br />
+    - Each rover has a position which is represented by a Cell object. <br />
+    - Each rover has a direction which is represented by a Direction enum. <br />
+    - The RoverSquad object maintains a list of rovers and deploys them on the grid. <br />
+    - The rovers can move around the grid using functions like: rotateLeft, rotateRight, move. <br />
+    - The rovers can be moved by passing a set of commands to the processCommands function. <br />
     
 > Direction
-    - The 4 possible directions North, South, East, West are represented by the enum Direction
-    - Each direction has left and right methods to return the direction the rover points to when it is called. 
+    - The 4 possible directions North, South, East, West are represented by the enum Direction. <br />
+    - Each direction has left and right methods to return the direction the rover points to when it is called. <br />
     - Also each direction has two variables to keep track of the increment values for the axes if 
-      the rover moves forward in that direction.
+      the rover moves forward in that direction. 
     
 ![alt tag](https://raw.github.com/shreyasanand/marsrover/master/images/Marsrover.jpg)
     
-> The Commands
-    - The commands to move the rover on the grid is implemented using the Command pattern
-    - The ICommand interface represents a generic contract for any kind of command given to the rover.
-    - Currently there are 3 kinds of concrete commands - 
-        * MoveCommand: Moves the rover forward to the next cell
-        * RotateRightCommand: Turns the rover right
+> The Commands <br />
+    - The commands to move the rover on the grid is implemented using the Command pattern. <br />
+    - The ICommand interface represents a generic contract for any kind of command given to the rover. <br />
+    - Currently there are 3 kinds of concrete commands - <br />
+        * MoveCommand: Moves the rover forward to the next cell <br />
+        * RotateRightCommand: Turns the rover right <br />
         * RotateLeftCommand: Turns the rover left
 
 ![alt tag](https://raw.github.com/shreyasanand/marsrover/master/images/CommandPattern.jpg)

@@ -6,7 +6,12 @@ import java.util.List;
 import com.covata.marsrover.mars.Cell;
 import com.covata.marsrover.mars.Grid;
 
-
+/**
+ * Represents the squad of rovers deployed on the grid.
+ * 
+ * @author shreyas
+ *
+ */
 public class RoverSquad {
 
 	private List<Rover> squad = new ArrayList<Rover>();
@@ -16,6 +21,9 @@ public class RoverSquad {
 		this.grid = grid;
 	}
 	
+	/*
+	 * Initializes and places a rover at the passed position in the Grid.
+	 */
 	public void deployRover(String position) {
 		String[] roverPosition = position.split(" ");
 		Cell initialCell = initCell(Integer.valueOf(roverPosition[0]), Integer.valueOf(roverPosition[1]));

@@ -11,7 +11,7 @@ import com.covata.marsrover.rover.Rover;
 import com.covata.marsrover.rover.RoverSquad;
 
 
-public class RoverTest {
+public class MarsRoverRunner {
 
 	public static void main(String[] args) {
 	
@@ -42,7 +42,7 @@ public class RoverTest {
 			for(int roverCount = 0; roverCount < rovers.size(); ++roverCount){
 				Rover rover = rovers.get(roverCount);
 				rover.processCommands(command_list.get(roverCount));
-				rover.printPosition();
+				System.out.println(rover.getCurrentPosition());
 			}
 			
 			inputFile.close();

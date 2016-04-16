@@ -34,8 +34,8 @@ public class Rover {
 		}
 	}
 	
-	public void printPosition() {
-		System.out.println(currentCell.toString()+" "+currentDirection.toString());
+	public String getCurrentPosition() {
+		return (currentCell.toString()+" "+currentDirection.toString());
 	}
 	
 	public void rotateRight() {

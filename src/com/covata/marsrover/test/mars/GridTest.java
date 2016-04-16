@@ -1,7 +1,5 @@
 package com.covata.marsrover.test.mars;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 

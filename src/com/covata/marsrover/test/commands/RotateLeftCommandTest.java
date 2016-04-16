@@ -1,11 +1,8 @@
 package com.covata.marsrover.test.commands;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.covata.marsrover.commands.MoveCommand;
 import com.covata.marsrover.commands.RotateLeftCommand;
 import com.covata.marsrover.mars.Cell;
 import com.covata.marsrover.mars.Grid;

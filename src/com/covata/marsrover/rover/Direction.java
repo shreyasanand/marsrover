@@ -3,7 +3,7 @@ package com.covata.marsrover.rover;
 /**
  * Enum that represents the direction of the rover.
  * Each direction has left and right methods to return the direction the rover points to
- * when it is called. Also each direction is has two variables to keep track of the 
+ * when it is called. Also each direction has two variables to keep track of the 
  * increment values for the axes if the rover moves forward in that direction.
  * 
  * @author shreyas
